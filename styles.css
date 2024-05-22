@@ -40,18 +40,38 @@ header {
 }
 /* Navegación */
 nav {
-    position: sticky;
     top: 0;
     width: 100%;
     text-align: center;
     padding: 10px;
     background-color: salmon;
 }
-nav a {
-    text-decoration: none;
-    color: #333;
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
     margin: 0 10px;
 }
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: lighter;
+    font-size: 1.2rem;
+}
+
+nav a:hover {    
+    text-decoration: underline;
+    font-weight: bold;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s;
+}
+
 /* Sección de Actividades */
 .actividades {
     background-color: #fff;
