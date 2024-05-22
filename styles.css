@@ -21,7 +21,7 @@ header {
     height: 300px;
     display: flex;
     flex-direction: column;
-    background-image: url(/proyectoG7/assets/img/tokio.webp);
+    background-image: url(./assets/img/tokio.webp);
     background-size: cover;
     background-position: center;
     padding: 10px 0;
