@@ -11,34 +11,12 @@
     <script src="https://kit.fontawesome.com/2eee655e12.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <nav class="fixed-top" id="nav">
-        <div class="logo">
-            <a href="#">
-            <img src="./assets/img/logo.png" alt="logo">
-            </a>
-        </div>
-        <ul>
-            <li>
-                <a href="#">
-                    <span class="nav-text">Inicio</span>
-                </a>
-            </li>
-            <li>
-                <a href="#actividades">
-                    <span class="nav-text">Actividades</span>
-                </a>
-            </li>
-            <li>
-                <a href="#gastronomia">
-                    <span class="nav-text">Gastronomía</span>
-                    </a>
-            </li>
-            <li>
-                <a href="#sitios-interes">
-                    <span class="nav-text">Sitios de Interés</span>
-                </a>
-            </li>
-        </ul>
+    <nav class="fixed-top">
+        <a href="#">Inicio</a>
+        <a href="#actividades">Actividades</a>
+        <a href="#gastronomia">Gastronomía</a>
+        <a href="#sitios-interes">Sitios de Interés</a>
+        <a href="#contacto">Contacto</a>
     </nav>
     <header>
         <h1 id="title">Turismo en Tokio</h1>
@@ -123,22 +101,50 @@
         <section class="contacto" id="contacto">
             <h2>Contacto</h2>
             <p>¿Tienes alguna pregunta o comentario? ¡Contáctanos!</p>
-            <div class="formulario">
+            <section class="formulario">
                 <form action="#">
                     <div>
-                    <label for="nombre">Nombre:</label>
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombreIngresado">
+                    <div>
+                    <div>
+                        <label for="Apellido">Apellido:</label><br>
+                        <input type="text" id="Apellido" name="ApellidoIngresado">
                     </div>
                     <div>
-                    <input type="text" id="nombre" name="nombre">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="emailIngresado">
                     </div>
                     <div>
-                    <label for="email">Email:</label>
-                    </div>
+                        <label for="FechadeReserva">Fecha de Reserva</label>
+                        <input type="date" id="FechaReserva" name="FechaReservaIngresado">
+                        <label for="FechadeSalida">Hasta:</label>
+                        <input type="date" id="FechaSalida" name="SalidaIngresado">
+                    </div><br>
                     <div>
-                    <input type="email" id="email" name="email">
-                    </div>
+                        <label for="Actividades">Lugar para reservar</label><br>
+                        <Select id="Lugar" name="LugarIngresado">
+                            <option>---Selecione una actividad---</option>
+                            <option value="">Meditación zazen</option>
+                            <option value="">Ceremonias de te</option>
+                            <option value="">Arreglos florales - Ikebana</option>
+                            <option value="">Gastronomía</option>
+                            <option value="">Paseo por el mercado Tsukiji</option>
+                            <option value="">Paseo por Ueno</option>
+                            <option value="">Paseo por Santuario</option>
+                        </Select>
+                    </div><br>
                     <div>
-                    <textarea name="mensaje" id="mensaje" cols="20" rows="4" placeholder="Escribe tu mensaje aquí"></textarea>
+                        <label for="Cantidad">Cantidad de personas</label><br>
+                        <Select id="Cantidad" name="CantidadIngresado">
+                            <option>---Selecione la cantidad de personas---</option>
+                            <option value="">1 a 3 personas</option>
+                            <option value="">4 a 6 personas</option>
+                            <option value="">mas de 6 personas</option>
+                        </Select>
+                    </div><br>
+                    <div>
+                        <textarea name="mensaje" id="mensaje" cols="20" rows="4" placeholder="Escribe tu mensaje aquí"></textarea>
                     </div>
                     <div>
                     <label for="tyc">
@@ -150,7 +156,7 @@
                     </div>
                 </form>
                 <p>¡Gracias por tu visita!</p>
-            </div>
+            </section>
         </section>
     </div>
     <footer>
