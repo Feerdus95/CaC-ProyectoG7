@@ -102,10 +102,11 @@
             <h2>Contacto</h2>
             <p>¿Tienes alguna pregunta o comentario? ¡Contáctanos!</p>
             <section class="formulario">
-                <form action="#">
+                <form action="#" method="get" id="FormContacto">
                     <div>
                         <label for="nombre">Nombre:</label>
                         <input type="text" id="nombre" name="nombreIngresado">
+                        <div id="errorNombre"></div>
                     <div>
                     <div>
                         <label for="Apellido">Apellido:</label><br>
@@ -117,20 +118,21 @@
                     </div>
                     <div>
                         <label for="FechadeReserva">Fecha de Reserva</label>
-                        <input type="date" id="FechaReserva" name="FechaReservaIngresado">
+                        <input type="date" id="FechadeReserva" name="FechaReservaIngresado">
                         <label for="FechadeSalida">Hasta:</label>
-                        <input type="date" id="FechaSalida" name="SalidaIngresado">
+                        <input type="date" id="FechadeSalida" name="SalidaIngresado">
                     </div><br>
                     <div>
-                        <label for="Lugar">Lugar para reservar</label><br>
-                        <Select id="Lugar" name="LugarIngresado">
-                            <option>---Selecione un lugar---</option>
-                            <option value="">Akihabara</option>
-                            <option value="">Asakusa</option>
-                            <option value="">Enoshima</option>
-                            <option value="">Goldengai</option>
-                            <option value="">Shibuya</option>
-                            <option value="">Shinjuku</option>
+                        <label for="Actividades">Lugar para reservar</label><br>
+                        <Select id="Actividades" name="LugarIngresado">
+                            <option>---Selecione una actividad---</option>
+                            <option value="">Meditación zazen</option>
+                            <option value="">Ceremonias de te</option>
+                            <option value="">Arreglos florales - Ikebana</option>
+                            <option value="">Gastronomía</option>
+                            <option value="">Paseo por el mercado Tsukiji</option>
+                            <option value="">Paseo por Ueno</option>
+                            <option value="">Paseo por Santuario</option>
                         </Select>
                     </div><br>
                     <div>
@@ -161,5 +163,7 @@
     <footer>
         &copy; 2024 Turismo en Tokio
     </footer>
+
+    <script src="validacionContacto.js"></script>
 </body>
 </html>

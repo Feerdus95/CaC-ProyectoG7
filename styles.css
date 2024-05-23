@@ -139,6 +139,13 @@ nav a {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+.formulario select{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
 .formulario input[type="submit"] {
     background-color: #333;
     color: #fff;
@@ -157,4 +164,9 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px 0;
+}
+
+.error{
+    border-color: red;
+    color: red;
 }
