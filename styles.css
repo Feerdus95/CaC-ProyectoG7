@@ -50,12 +50,12 @@ nav a {
     text-decoration: none;
     font-weight: lighter;
     font-size: 1.0rem;
+    border-bottom: 1px solid transparent;
+    transition: 500ms;
 }
 
 nav a:hover {    
-    text-decoration: underline;
-    font-weight: bold;
-    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s;
+    border-color: #fff;
 }
 
 /* Encabezado */
@@ -204,6 +204,11 @@ footer {
 }
 
 @media (max-width: 767px) {
+
+    nav ul {
+        flex-wrap: wrap;
+    }
+
     .container {
         padding: 10px;
     }
