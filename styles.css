@@ -71,12 +71,14 @@ header {
     background-position: center;
     padding: 10px 0;
 }
+
 #title{
     font-size: 3.5rem;
     align-self: center;
     -webkit-text-stroke-width: 0.75px;
     -webkit-text-stroke-color: gray;
 }
+
 #message{
     font-size: 2.25rem;
     align-self: center;
@@ -161,6 +163,7 @@ header {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 .formulario input[type="text"],
 .formulario input[type="email"],
 .formulario textarea {
@@ -170,6 +173,11 @@ header {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+
+.formulario input[type="checkbox"] {
+    margin-bottom: 25px;
+}
+
 .formulario input[type="submit"] {
     background-color: #333;
     color: #fff;
@@ -177,15 +185,63 @@ header {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
+
 .formulario input[type="submit"]:hover {
     background-color: #555;
 }
 
-/* Pie de página */
+.formulario p {
+    margin-top: 20px;
+}
+
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 10px 0;
+}
+
+@media (max-width: 767px) {
+    .container {
+        padding: 10px;
+    }
+
+    .wrapper {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .wrapper img {
+        width: 100%;
+        height: auto;
+    }
+
+    .gastronomia {
+        padding: 20px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    .container {
+        padding: 20px;
+    }
+
+    .wrapper {
+        gap: 20px;
+    }
+
+    .wrapper img {
+        width: 300px;
+        height: auto;
+    }
+}
+
+@media (min-width: 1024px) {
+    .wrapper img {
+        width: 300px;
+        height: 300px;
+    }
 }
