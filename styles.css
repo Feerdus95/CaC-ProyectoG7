@@ -225,23 +225,22 @@ footer {
 
 @media (min-width: 768px) and (max-width: 1023px) {
 
-    .container {
-        padding: 20px;
-    }
-
     .wrapper {
-        gap: 20px;
+        flex-direction: column;
+        gap: 15px;
     }
 
     .wrapper img {
-        width: 300px;
+        width: 80%;
         height: auto;
     }
 }
 
 @media (min-width: 1024px) {
+
     .wrapper img {
         width: 300px;
         height: 300px;
     }
+
 }
