@@ -58,6 +58,10 @@ nav a:hover {
     border-color: #fff;
 }
 
+.logo a {
+    border-bottom: none;
+}
+
 /* Encabezado */
 header {
     margin-top: calc(70px + 20px);
