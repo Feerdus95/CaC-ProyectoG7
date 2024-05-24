@@ -128,22 +128,57 @@
         <section class="contacto" id="contacto">
             <h2>Contacto</h2>
             <p>¿Tienes alguna pregunta o comentario? ¡Contáctanos!</p>
-            <div class="formulario" id="formulario">
-                <form action="#">
+            <section class="formulario">
+                <form action="#" method="get" id="FormContacto">
                     <div>
                         <label for="nombre">Nombre:</label>
-                    </div>
+                        <input type="text" id="nombre" name="nombreIngresado">
+                        <div id="errorNombre"></div>
                     <div>
-                        <input type="text" id="nombre" name="nombre">
+                    <div>
+                        <label for="Apellido">Apellido:</label><br>
+                        <input type="text" id="Apellido" name="ApellidoIngresado">
+                        <div id="errorApellido"></div>
                     </div>
                     <div>
                         <label for="email">Email:</label>
+                        <input type="email" id="email" name="emailIngresado">
+                        <div id="errorEmail"></div>
                     </div>
                     <div>
-                        <input type="email" id="email" name="email">
-                    </div>
+                        <label for="FechadeReserva">Fecha de Reserva</label>
+                        <input type="date" id="FechadeReserva" name="FechaReservaIngresado">
+                        <label for="FechadeSalida">Hasta:</label>
+                        <input type="date" id="FechadeSalida" name="SalidaIngresado">
+                        <div id="errorFecha"></div>
+                    </div><br>
+                    <div>
+                        <label for="Actividades">Lugar para reservar</label><br>
+                        <Select id="Actividades" name="LugarIngresado">
+                            <option>---Selecione una actividad---</option>
+                            <option value="">Meditación zazen</option>
+                            <option value="">Ceremonias de te</option>
+                            <option value="">Arreglos florales - Ikebana</option>
+                            <option value="">Gastronomía</option>
+                            <option value="">Paseo por el mercado Tsukiji</option>
+                            <option value="">Paseo por Ueno</option>
+                            <option value="">Paseo por Santuario</option>
+                        </Select>
+                        <div id="errorActividad"></div>
+                    </div><br>
+                    <div>
+                        <label for="Cantidad">Cantidad de personas</label><br>
+                        <Select id="Cantidad" name="CantidadIngresado">
+                            <option>---Selecione la cantidad de personas---</option>
+                            <option value="">1 a 3 personas</option>
+                            <option value="">4 a 6 personas</option>
+                            <option value="">mas de 6 personas</option>
+                        </Select>
+                        <div id="errorCantidad"></div>
+                    </div><br>
                     <div>
                         <textarea name="mensaje" id="mensaje" cols="20" rows="4" placeholder="Escribe tu mensaje aquí"></textarea>
+                        <div id="errorComentario"></div>
                     </div>
                     <div>
                         <label for="tyc">
@@ -155,11 +190,13 @@
                     </div>
                     <p>¡Gracias por tu visita!</p>
                 </form>
-            </div>
+            </section>
         </section>
     </div>
     <footer>
         &copy; 2024 Turismo en Tokio
     </footer>
+
+    <script src="validacionContacto.js"></script>
 </body>
 </html>

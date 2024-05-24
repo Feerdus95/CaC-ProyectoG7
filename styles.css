@@ -64,7 +64,7 @@ nav a:hover {
 
 /* Encabezado */
 header {
-    margin-top: calc(70px + 20px);
+    margin-top: 44px;
     color: #ffffff;
     width: 100%;
     height: 300px;
@@ -89,7 +89,20 @@ header {
     -webkit-text-stroke-width: 0.5px;
     -webkit-text-stroke-color: gray;
 }
-
+/* Navegación */
+nav {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: salmon;
+}
+nav a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 10px;
+}
 /* Sección de Actividades */
 .actividades {
     background-color: #fff;
@@ -170,7 +183,15 @@ header {
 
 .formulario input[type="text"],
 .formulario input[type="email"],
+.formulario input[type="date"],
 .formulario textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.formulario select{
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
@@ -207,6 +228,10 @@ footer {
     padding: 10px 0;
 }
 
+#errorNombre, #errorApellido, #errorEmail, #errorFecha, #errorActividad, #errorCantidad, #errorComentario{
+    border-color: red;
+    color: red;
+}
 @media (max-width: 767px) {
 
     nav ul {
