@@ -11,12 +11,39 @@
     <script src="https://kit.fontawesome.com/2eee655e12.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <nav class="fixed-top">
-        <a href="#">Inicio</a>
-        <a href="#actividades">Actividades</a>
-        <a href="#gastronomia">Gastronomía</a>
-        <a href="#sitios-interes">Sitios de Interés</a>
-        <a href="#contacto">Contacto</a>
+    <nav class="fixed-top" id="nav">
+        <div class="logo">
+            <a href="#">
+            <img src="./assets/img/logo.png" alt="logo">
+            </a>
+        </div>
+        <ul>
+            <li>
+                <a href="#">
+                    <span class="nav-text">Inicio</span>
+                </a>
+            </li>
+            <li>
+                <a href="#actividades">
+                    <span class="nav-text">Actividades</span>
+                </a>
+            </li>
+            <li>
+                <a href="#gastronomia">
+                    <span class="nav-text">Gastronomía</span>
+                    </a>
+            </li>
+            <li>
+                <a href="#sitios-interes">
+                    <span class="nav-text">Sitios de Interés</span>
+                </a>
+            </li>
+            <li>
+                <a href="#contacto">
+                    <span class="nav-text">Contacto</span>
+                </a>
+            </li>
+        </ul>
     </nav>
     <header>
         <h1 id="title">Turismo en Tokio</h1>
@@ -154,15 +181,15 @@
                         <div id="errorComentario"></div>
                     </div>
                     <div>
-                    <label for="tyc">
-                        <input class="inline" id="tyc" type="checkbox" required name="tyc"/> Acepto los <a href="#">terminos y condiciones</a>
-                    </label>
+                        <label for="tyc">
+                            <input class="inline" id="tyc" type="checkbox" required name="tyc"/> Acepto los <a href="#">terminos y condiciones</a>
+                        </label>
                     </div>
                     <div>
-                    <button type="submit">Enviar</button>
+                        <input type="submit" value="Enviar">
                     </div>
+                    <p>¡Gracias por tu visita!</p>
                 </form>
-                <p>¡Gracias por tu visita!</p>
             </section>
         </section>
     </div>
