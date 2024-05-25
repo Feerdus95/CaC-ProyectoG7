@@ -11,16 +11,43 @@
     <script src="https://kit.fontawesome.com/2eee655e12.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <nav class="fixed-top">
-        <a href="#">Inicio</a>
-        <a href="#actividades">Actividades</a>
-        <a href="#gastronomia">Gastronomía</a>
-        <a href="#sitios-interes">Sitios de Interés</a>
-        <a href="#contacto">Contacto</a>
+    <nav class="fixed-top" id="nav">
+        <div class="logo">
+            <a href="#">
+            <img src="./assets/img/logo.png" alt="logo">
+            </a>
+        </div>
+        <ul>
+            <li>
+                <a href="#">
+                    <span class="nav-text">Inicio</span>
+                </a>
+            </li>
+            <li>
+                <a href="#actividades">
+                    <span class="nav-text">Actividades</span>
+                </a>
+            </li>
+            <li>
+                <a href="#gastronomia">
+                    <span class="nav-text">Gastronomía</span>
+                    </a>
+            </li>
+            <li>
+                <a href="#sitios-interes">
+                    <span class="nav-text">Sitios de Interés</span>
+                </a>
+            </li>
+            <li>
+                <a href="#contacto">
+                    <span class="nav-text">Contacto</span>
+                </a>
+            </li>
+        </ul>
     </nav>
     <header>
         <h1 id="title">Turismo en Tokio</h1>
-        <p id="message">Descubre la ciudad!</p>
+        <p id="message">¡Descubre la ciudad!</p>
     </header>
     <div class="container">
         <section class="actividades" id="actividades">
@@ -110,7 +137,7 @@
                     <div>
                     <div>
                         <label for="Apellido">Apellido:</label><br>
-                        <input type="text" id="Apellido" name="ApellidoIngresado">
+                        <input type="text" id="apellido" name="ApellidoIngresado">
                         <div id="errorApellido"></div>
                     </div>
                     <div>
@@ -128,24 +155,24 @@
                     <div>
                         <label for="Actividades">Lugar para reservar</label><br>
                         <Select id="Actividades" name="LugarIngresado">
-                            <option>---Selecione una actividad---</option>
-                            <option value="Meditación zazen">Meditación zazen</option>
-                            <option value="Ceremonias de te">Ceremonias de te</option>
-                            <option value="Arreglos florales - Ikebana">Arreglos florales - Ikebana</option>
-                            <option value="Gastronomía">Gastronomía</option>
-                            <option value="Paseo por el mercado Tsukiji">Paseo por el mercado Tsukiji</option>
-                            <option value="Paseo por Ueno">Paseo por Ueno</option>
-                            <option value="Paseo por Santuario">Paseo por Santuario</option>
+                            <option>---Seleccione una actividad---</option>
+                            <option value="">Meditación Zazen</option>
+                            <option value="">Ceremonias de té</option>
+                            <option value="">Arreglos florales - Ikebana</option>
+                            <option value="">Gastronomía</option>
+                            <option value="">Paseo por el Mercado Tsukiji</option>
+                            <option value="">Paseo por Ueno</option>
+                            <option value="">Paseo por Santuario</option>
                         </Select>
                         <div id="errorActividad"></div>
                     </div><br>
                     <div>
                         <label for="Cantidad">Cantidad de personas</label><br>
                         <Select id="Cantidad" name="CantidadIngresado">
-                            <option>---Selecione la cantidad de personas---</option>
-                            <option value="1 a 3 personas">1 a 3 personas</option>
-                            <option value="4 a 6 personas">4 a 6 personas</option>
-                            <option value="mas de 6 personas">mas de 6 personas</option>
+                            <option>---Seleccione la cantidad de personas---</option>
+                            <option value="">1 a 3 personas</option>
+                            <option value="">4 a 6 personas</option>
+                            <option value="">Más de 6 personas</option>
                         </Select>
                         <div id="errorCantidad"></div>
                     </div><br>
@@ -154,22 +181,21 @@
                         <div id="errorComentario"></div>
                     </div>
                     <div>
-                    <label for="tyc">
-                        <input class="inline" id="tyc" type="checkbox" required name="tyc"/> Acepto los <a href="#">terminos y condiciones</a>
-                    </label>
+                        <label for="tyc">
+                            <input class="inline" id="tyc" type="checkbox" required name="tyc"/> Acepto los <a href="#">términos y condiciones</a>
+                        </label>
                     </div>
                     <div>
-                    <button type="submit">Enviar</button>
+                        <input type="submit" value="Enviar">
                     </div>
+                    <p>¡Gracias por tu visita!</p>
                 </form>
-                <p>¡Gracias por tu visita!</p>
             </section>
         </section>
     </div>
     <footer>
         &copy; 2024 Turismo en Tokio
     </footer>
-
-    <script src="validacionContacto.js"></script>
+    <script src="./assets/js/validacionContacto.js"></script>
 </body>
 </html>
