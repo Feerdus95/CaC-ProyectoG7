@@ -66,7 +66,7 @@ let validarDatos = (e) => {
     
         validacion = false;
     }
-
+    
     let inputFecha = document.querySelector("#FechadeReserva");
     if (inputFecha && inputFecha.value.trim() === "") {
         let divError = document.querySelector("#errorFecha");
@@ -82,29 +82,21 @@ let validarDatos = (e) => {
     }
 
     let inputActividad = document.querySelector("#Actividades");
-    if (inputActividad && inputActividad.value.trim() === "") {
-        let divError = document.querySelector("#errorActividad");
-        if (divError) {
-            divError.textContent = "El campo Lugar para reservar no puede quedar vacio";
-        }
+    if (inputActividad.value = "---Selecione una actividad---"){
+        let divError = document.querySelector("#errorActividad")
+        divError.textContent = "El campo Lugar para reservar no puede quedar vacio"
 
-        if (inputActividad) {
-            inputActividad.classList.add("error");
-        }
+        inputActividad.classList.add("error")
 
         validacion = false;
     }
 
     let inputCantidad = document.querySelector("#Cantidad");
-    if (inputCantidad && inputCantidad.value.trim() === "") {
-        let divError = document.querySelector("#errorCantidad");
-        if (divError) {
-            divError.textContent = "El campo Cantidad de personas no puede quedar vacio";
-        }
+    if (inputCantidad.value = "---Selecione la cantidad de personas---"){
+        let divError = document.querySelector("#errorCantidad")
+        divError.textContent = "El campo Cantidad de personas no puede quedar vacio"
 
-        if (inputCantidad) {
-            inputCantidad.classList.add("error");
-        }
+        inputCantidad.classList.add("error")
 
         validacion = false;
     }
