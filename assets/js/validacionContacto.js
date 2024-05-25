@@ -7,13 +7,24 @@ let validarDatos = (e) => {
     if (inputNombre && inputNombre.value.trim() === "") {
         let divError = document.querySelector("#errorNombre");
         if (divError) {
-            divError.textContent = "El campo Nombre no puede quedar vacio";
+            divError.textContent = "El campo Nombre no puede quedar vacío";
         }
-
+    
         if (inputNombre) {
             inputNombre.classList.add("error");
         }
-
+    
+        validacion = false;
+    } else if (inputNombre.value.length < 3 || inputNombre.value.length > 20) {
+        let divError = document.querySelector("#errorNombre");
+        if (divError) {
+            divError.textContent = "El nombre debe tener entre 3 y 20 caracteres";
+        }
+    
+        if (inputNombre) {
+            inputNombre.classList.add("error");
+        }
+    
         validacion = false;
     }
 
@@ -35,13 +46,24 @@ let validarDatos = (e) => {
     if (inputEmail && inputEmail.value.trim() === "") {
         let divError = document.querySelector("#errorEmail");
         if (divError) {
-            divError.textContent = "El campo Email no puede quedar vacio";
+            divError.textContent = "El campo Email no puede quedar vacío";
         }
-
+    
         if (inputEmail) {
             inputEmail.classList.add("error");
         }
-
+    
+        validacion = false;
+    } else if (!inputEmail.value.includes("@") || !inputEmail.value.includes(".com")) {
+        let divError = document.querySelector("#errorEmail");
+        if (divError) {
+            divError.textContent = "Por favor, ingresa una dirección de correo electrónico válida";
+        }
+    
+        if (inputEmail) {
+            inputEmail.classList.add("error");
+        }
+    
         validacion = false;
     }
 
