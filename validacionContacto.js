@@ -46,7 +46,7 @@ let validarDatos = (e) => {
     }
 
     let inputActividad = document.querySelector("#Actividades");
-    if (inputActividad.value === ""){
+    if (inputActividad.value === "---Selecione una actividad---"){
         let divError = document.querySelector("#errorActividad")
         divError.textContent = "El campo Lugar para reservar no puede quedar vacio"
 
@@ -56,7 +56,7 @@ let validarDatos = (e) => {
     }
 
     let inputCantidad = document.querySelector("#Cantidad");
-    if (inputCantidad.value === ""){
+    if (inputCantidad.value === "---Selecione la cantidad de personas---"){
         let divError = document.querySelector("#errorCantidad")
         divError.textContent = "El campo Cantidad de personas no puede quedar vacio"
 
