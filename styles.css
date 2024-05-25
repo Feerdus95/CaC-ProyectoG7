@@ -166,7 +166,7 @@ footer {
     padding: 10px 0;
 }
 
-.error{
+#errorNombre, #errorApellido, #errorEmail, #errorFecha, #errorActividad, #errorCantidad, #errorComentario{
     border-color: red;
     color: red;
 }

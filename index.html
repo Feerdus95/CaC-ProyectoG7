@@ -111,16 +111,19 @@
                     <div>
                         <label for="Apellido">Apellido:</label><br>
                         <input type="text" id="Apellido" name="ApellidoIngresado">
+                        <div id="errorApellido"></div>
                     </div>
                     <div>
                         <label for="email">Email:</label>
                         <input type="email" id="email" name="emailIngresado">
+                        <div id="errorEmail"></div>
                     </div>
                     <div>
                         <label for="FechadeReserva">Fecha de Reserva</label>
                         <input type="date" id="FechadeReserva" name="FechaReservaIngresado">
                         <label for="FechadeSalida">Hasta:</label>
                         <input type="date" id="FechadeSalida" name="SalidaIngresado">
+                        <div id="errorFecha"></div>
                     </div><br>
                     <div>
                         <label for="Actividades">Lugar para reservar</label><br>
@@ -134,6 +137,7 @@
                             <option value="">Paseo por Ueno</option>
                             <option value="">Paseo por Santuario</option>
                         </Select>
+                        <div id="errorActividad"></div>
                     </div><br>
                     <div>
                         <label for="Cantidad">Cantidad de personas</label><br>
@@ -143,9 +147,11 @@
                             <option value="">4 a 6 personas</option>
                             <option value="">mas de 6 personas</option>
                         </Select>
+                        <div id="errorCantidad"></div>
                     </div><br>
                     <div>
                         <textarea name="mensaje" id="mensaje" cols="20" rows="4" placeholder="Escribe tu mensaje aquí"></textarea>
+                        <div id="errorComentario"></div>
                     </div>
                     <div>
                     <label for="tyc">
