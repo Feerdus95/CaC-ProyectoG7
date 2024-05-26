@@ -54,7 +54,7 @@ let validarDatos = (e) => {
         }
     
         validacion = false;
-    } else if (!inputEmail.value.includes("@")) {
+    } else if (!inputEmail.value.includes("@")){
         let divError = document.querySelector("#errorEmail");
         if (divError) {
             divError.textContent = "Por favor, ingresa una dirección de correo electrónico válida";
