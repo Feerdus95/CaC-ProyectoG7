@@ -52,21 +52,10 @@ let validarDatos = (e) => {
         if (inputEmail) {
             inputEmail.classList.add("error");
         }
-    
+            
         validacion = false;
-    } else if (!inputEmail.value.includes("@")){
-        let divError = document.querySelector("#errorEmail");
-        if (divError) {
-            divError.textContent = "Por favor, ingresa una dirección de correo electrónico válida";
-        }
-    
-        if (inputEmail) {
-            inputEmail.classList.add("error");
-        }
-    
-        validacion = false;
-    }
-    
+    } 
+
     let inputFecha = document.querySelector("#FechadeVisita");
     if (inputFecha && inputFecha.value.trim() === "") {
         let divError = document.querySelector("#errorFecha");
