@@ -7,6 +7,7 @@
     <title>Conocer Tokio</title>
     <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/2eee655e12.js" crossorigin="anonymous"></script>
 </head>
@@ -68,7 +69,7 @@
                 </div>
             </div>
         </section>
-        <section class="gastronomia" id="gastronomia">
+        <section class="gastronomia" data-aos="fade-right" data-aos-duration="1250" id="gastronomia">
             <h2>Gastronomía</h2>
             <p>Prueba deliciosos platos de sushi, ramen y más en los restaurantes locales.</p>
             <div class="wrapper" id="wr-gast">
@@ -84,7 +85,7 @@
                     <img src="./assets/img/gast2.jpg" alt="Ramen">
             </div>
         </section>
-        <section class="sitios-interes" id="sitios-interes">
+        <section class="sitios-interes" data-aos="fade-up" data-aos-duration="1250" id="sitios-interes">
         <h2>Sitios de Interés</h2>
         <div class="carousel-wr">
             <div id="demo" class="carousel slide" data-bs-ride="carousel">
@@ -131,7 +132,7 @@
             </div>
         </div>
         </section>
-        <section class="contacto" id="contacto">
+        <section class="contacto" data-aos="zoom-in" data-aos-duration="1250" id="contacto">
             <h2>Contacto</h2>
             <p>¿Tienes alguna pregunta o comentario? ¡Contáctanos!</p>
             <div class="formulario">
@@ -203,5 +204,9 @@
         &copy; 2024 Turismo en Tokio
     </footer>
     <script src="./assets/js/validacionContacto.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
