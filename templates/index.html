@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <title>Conocer Tokio</title>
-    <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico')}}" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -15,7 +15,7 @@
     <nav class="fixed-top" id="nav">
         <div class="logo">
             <a href="#">
-            <img src="./assets/img/logo.png" alt="logo">
+            <img src="{{ url_for('static', filename='logo.png')}}" alt="logo">
             </a>
         </div>
         <ul>
@@ -57,15 +57,15 @@
             <div class="wrapper">
                 <div class="act1">
                     <h4>Meditación Zazen</h4>
-                    <img src="./assets/img/act1.jpg" alt="Meditación Zazen">
+                    <img src="{{ url_for('static', filename='act1.jpg')}}" alt="Meditación Zazen">
                 </div>
                 <div class="act2">
                     <h4>Ceremonias de té</h4>
-                    <img src="./assets/img/act2.jpg" alt="Ceremonias de te">
+                    <img src="{{ url_for('static', filename='act2.jpg')}}" alt="Ceremonias de te">
                 </div>
                 <div class="act3">
                     <h4>Arreglos florales - Ikebana</h4>
-                    <img src="./assets/img/act3.jpg" alt="Arreglos florales - Ikebana">
+                    <img src="{{ url_for('static', filename='act3.jpg')}}" alt="Arreglos florales - Ikebana">
                 </div>
             </div>
         </section>
@@ -73,7 +73,7 @@
             <h2>Gastronomía</h2>
             <p>Prueba deliciosos platos de sushi, ramen y más en los restaurantes locales.</p>
             <div class="wrapper" id="wr-gast">
-                    <img src="./assets/img/gast1.jpg" alt="Sushi">
+                    <img src="{{ url_for('static', filename='gast1.jpg')}}" alt="Sushi">
                     <div class="texto">
                         <h6>Sushi</h6>
                         <p>Es un plato de la gastronomía japonesa con base de arroz condimentado con vinagre y azúcar.</p>
@@ -82,7 +82,7 @@
                         <h6>Ramen</h6>
                         <p>Sopa cuyos ingredientes principales son los fideos chinos, acompañados de caldo de carne, verduras y carne, marisco o pescado.</p>
                     </div>
-                    <img src="./assets/img/gast2.jpg" alt="Ramen">
+                    <img src="{{ url_for('static', filename='gast2.jpg')}}" alt="Ramen">
             </div>
         </section>
         <section class="sitios-interes" data-aos="fade-up" data-aos-duration="1250" id="sitios-interes">
@@ -96,7 +96,7 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="./assets/img/santuario.webp" alt="Santuario" class="d-block w-100">
+                    <img src="{{ url_for('static', filename='santuario.webp')}}" alt="Santuario" class="d-block w-100">
                     <div class="carousel-caption">
                         <h3><b>Templo Sensô-Ji</b></h3>
                         <p class="subtitulo">
@@ -105,7 +105,7 @@
                     </div>
                 </div>
             <div class="carousel-item">
-                    <img src="./assets/img/ueno.webp" alt="Ueno" class="d-block w-100">
+                    <img src="{{ url_for('static', filename='ueno.webp')}}" alt="Ueno" class="d-block w-100">
                     <div class="carousel-caption">
                         <h3><b>Parque de Ueno</b></h3>
                         <p class="subtitulo">
@@ -114,7 +114,7 @@
                     </div>
             </div>
             <div class="carousel-item">
-                <img src="./assets/img/tsukiji.webp" alt="Mercado Tsukiji" class="d-block w-100">
+                <img src="{{ url_for('static', filename='tsukiji.webp')}}" alt="Mercado Tsukiji" class="d-block w-100">
                 <div class="carousel-caption">
                     <h3><b>Mercado Tsukiji</b></h3>
                     <p class="subtitulo">
@@ -136,7 +136,7 @@
             <h2>Contacto</h2>
             <p>¿Tienes alguna pregunta o comentario? ¡Contáctanos!</p>
             <div class="formulario">
-                <form action="#" method="get" id="FormContacto">
+                <form action="/agregar_actividad" method="POST" id="FormContacto">
                     <div>
                         <label for="nombre">Nombre:</label>
                         <input type="text" id="nombre" name="nombreIngresado">
@@ -153,15 +153,15 @@
                         <div id="errorEmail"></div>
                     </div>
                     <div>
-                        <label for="FechadeVisita">Fecha de visita</label>
-                        <input type="date" id="FechadeVisita" name="FechaVisitaIngresado">
-                        <label for="FechadeSalida">Hasta:</label>
-                        <input type="date" id="FechadeSalida" name="SalidaIngresado">
+                        <label for="fecha_desde">Fecha de visita</label>
+                        <input type="date" id="fecha_desde" name="FechaVisitaIngresado">
+                        <label for="fecha_hasta">Hasta:</label>
+                        <input type="date" id="fecha_hasta" name="SalidaIngresado">
                         <div id="errorFecha"></div>
                     </div><br>
                     <div>
-                        <label for="Actividades">Actividad a reservar</label><br>
-                        <Select id="Actividades" name="LugarIngresado">
+                        <label for="actividad">Actividad a reservar</label><br>
+                        <Select id="actividad" name="LugarIngresado">
                             <option>---Seleccione una actividad---</option>
                             <option value="">Meditación Zazen</option>
                             <option value="">Ceremonias de té</option>
@@ -174,13 +174,9 @@
                         <div id="errorActividad"></div>
                     </div><br>
                     <div>
-                        <label for="Cantidad">Cantidad de personas</label><br>
-                        <Select id="Cantidad" name="CantidadIngresado">
-                            <option>---Seleccione la cantidad de personas---</option>
-                            <option value="">1 a 3 personas</option>
-                            <option value="">4 a 6 personas</option>
-                            <option value="">Más de 6 personas</option>
-                        </Select>
+                        <label for="cant_personas">Cantidad de personas</label><br>
+                        <input type="number" id="cant_personas" name="CantidadIngresado" style="width: 100%;">
+                        </input>
                         <div id="errorCantidad"></div>
                     </div><br>
                     <div>
@@ -199,11 +195,56 @@
                 </form>
             </div>
         </section>
+        <section class="crud" data-aos="flip-up" data-aos-duration="1250" id="crud">
+            <h2>Reservas</h2>
+            <p>En esta sección puedes ver todas las reservas.</p>
+            <form id="reservaForm">
+                <input type="hidden" id="reservaId">
+                <label for="nomb">Nombre:</label>
+                <input type="text" id="nomb" required>
+                <label for="apell">Apellido:</label>
+                <input type="text" id="apell" required>
+                <label for="email">Email:</label>
+                <input type="e-mail" id="e-mail" required>
+                <label for="fecha_d">Fecha desde:</label>
+                <input type="date" id="fecha_d" required>
+                <label for="fecha_h">Fecha hasta:</label>
+                <input type="date" id="fecha_h" required>
+                <label for="act">Actividad:</label>
+                <input type="text" id="act" required>
+                <label for="monto">Monto:</label>
+                <input type="number" step="0.01" id="monto" required>
+                <label for="cant_pers">Personas:</label>
+                <input type="number" id="cant_pers" required>
+                <label for="coments">Comentarios:</label>
+                <input type="text" id="coments" required>
+                <button type="submit">Guardar</button>
+            </form>
+            <table id="tablaReservas">
+                <h2>{{message}}</h2>
+                <thead>
+                    <tr>
+                        {% for header in headers %}
+                            <th>{{ header }}</th>
+                        {% endfor %}
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for reserva in reservas %}
+                        <tr>
+                            {% for value in reserva %}
+                                <td>{{ value }}</td>
+                            {% endfor %}
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </section>
     </div>
     <footer>
         &copy; 2024 Turismo en Tokio
     </footer>
-    <script src="./assets/js/validacionContacto.js"></script>
+    <script src="/static/assets/js/validacionContacto.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();

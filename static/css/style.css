@@ -70,7 +70,7 @@ header {
     height: 300px;
     display: flex;
     flex-direction: column;
-    background-image: url(./assets/img/tokio.webp);
+    background-image: url(/static/tokio.webp);
     background-size: cover;
     background-position: center;
     padding: 10px 0;
@@ -194,7 +194,7 @@ header {
 }
 
 #mensaje{
-    background-image: url(./assets/img/form-img.png);
+    background-image: url(/static/form-img.png);
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: 33%;
@@ -235,6 +235,24 @@ footer {
     border-color: red;
     color: red;
 }
+
+/* Sección CRUD*/
+
+#crud {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: #333 solid 1px;
+}
+
+#crud table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
 @media (max-width: 767px) {
 
     nav ul {
